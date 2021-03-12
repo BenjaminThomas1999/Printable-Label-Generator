@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Label Maker</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./code/main.css">
+	
+	<style>
+		@media print{
+			#config, #td{
+				display:none;
+			}
+			html{
+				background:#FFFFFF;
+			}
+			#A4 {
+				box-shadow:none;
+				margin:0px;
+				padding:0px;
+				margin-top:13.5mm;
+				margin-left:9.3mm;
+				display:block;
+				
+			}
+		}
+	</style>
+	<script>
+		function toggleVis(id){
+			currentVis = document.getElementById(id).style.visibility;
+			
+			if(currentVis == "hidden"){
+				document.getElementById(id).style.visibility = "visible";
+			}
+			else{
+				document.getElementById(id).style.visibility = "hidden";
+			}
+			
+			return 0;
+		}
+		
+		
+	</script>
+</head>
+<body>
+	<div id="config">
+		<img src="code/logo.jpeg" class="header">
+		<h1>Parti.Company Label Maker</h1>
+		<h2>Instructions:</h2>
+		<ol>
+			<li>Make sure you are using Google Chrome</li>
+			<li>Design your label in Powerpoint</li>
+			<li>Use Windows+Shift+S to copy your design</li>
+			<li>Paste into paint</li>
+			<li>Overwrite "label.png" with the new design</li>
+			<li>Select the number of labels you want printed below</li>
+			<li>Press print</li>
+			<li>Click "More settings", select A4 paper and put margins to "none"</li>
+			<li>Click print using system dialog.</li>
+		</ol>
+		
+		<h2>Preview:</h2>
+		<span id="td"></span>
+		<hr>
+		<table>
+			<tr>
+				<td><input checked type="checkbox" onclick="toggleVis('1')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('2')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('3')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('4')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('5')"></td>
+			</tr>
+			<tr>
+				<td><input checked type="checkbox" onclick="toggleVis('6')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('7')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('8')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('9')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('10')"></td>
+			</tr>
+			<tr>
+				<td><input checked type="checkbox" onclick="toggleVis('11')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('12')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('13')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('14')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('15')"></td>
+			</tr>
+			<tr>
+				<td><input checked type="checkbox" onclick="toggleVis('16')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('17')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('18')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('19')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('20')"></td>
+			</tr>
+			<tr>
+				<td><input checked type="checkbox" onclick="toggleVis('21')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('22')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('23')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('24')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('25')"></td>
+			</tr>
+			<tr>
+				<td><input checked type="checkbox" onclick="toggleVis('26')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('27')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('28')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('29')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('30')"></td>
+			</tr>
+			<tr>
+				<td><input checked type="checkbox" onclick="toggleVis('31')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('32')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('33')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('34')"></td>
+				<td><input checked type="checkbox" onclick="toggleVis('35')"></td>
+			</tr>
+		</table>
+		<button onclick="window.print();return false;" />Print</button>
+	</div>
+	<table id="A4">
+		<tr><td id="1"></td><td id="2"></td><td id="3"></td><td id="4"></td><td id="5"></td></tr>
+		<tr><td id="6"></td><td id="7"></td><td id="8"></td><td id="9"></td><td id="10"></td></tr>
+		<tr><td id="11"></td><td id="12"></td><td id="13"></td><td id="14"></td><td id="15"></td></tr>
+		<tr><td id="16"></td><td id="17"></td><td id="18"></td><td id="19"></td><td id="20"></td></tr>
+		<tr><td id="21"></td><td id="22"></td><td id="23"></td><td id="24"></td><td id="25"></td></tr>
+		<tr><td id="26"></td><td id="27"></td><td id="28"></td><td id="29"></td><td id="30"></td></tr>
+		<tr><td id="31"></td><td id="32"></td><td id="33"></td><td id="34"></td><td id="35"></td></tr>
+	</table>
+
+
+</body>
+</html>
